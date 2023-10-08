@@ -1,0 +1,111 @@
+
+/* LAYOUT */
+
+  .crew-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .react-tabs__tab-list{
+    padding: 0;
+    display: flex;
+    gap : 1em;
+    justify-content: center;
+      
+  }
+
+  .react-tabs__tab{
+    background-color: #979797;
+    cursor: pointer;
+    width: 1em;
+    height: 1em;
+    border-radius:50%;
+    list-style: none;
+  }
+
+  .react-tabs__tab--selected{
+    background-color: white;
+  }
+  
+  .tab-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+  }
+
+  .crew-detail{
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  /* TYPOGRAPHY */
+  .crew-detail h3{
+    color: rgba(255, 255, 255, 0.5);
+    font-size:1rem;
+  }
+  .crew-detail h4{
+    font-size: 1.5rem;
+  }
+  
+  /* IMAGES */
+
+  .picture{
+    width: 60%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin:0 auto;
+  }
+
+  .picture  img{
+    width: 100%;
+    display: block;
+  }
+
+/* MEDIA QUERIES */
+
+@media (min-width: 602px) {
+  /* Layout */
+
+  .tab-container{
+    justify-content: space-between;
+    padding:0 4em;
+  }
+
+  .tab-panel{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+
+  .crew-detail{ 
+    width: 50%;
+  }
+
+  .picture{
+    width: 50%;
+    min-width: 400px;
+    align-self: end;
+  }
+
+  .picture img {
+    width: 50%;
+    margin: 0 auto; 
+  }
+
+  /* Typography */
+
+  .crew-detail h3{
+    font-size: 2rem;
+  }
+  .crew-detail h4{
+    font-size: 3.5rem;
+  }
+
+  .crew-detail p{
+    font-size: 1.125rem;
+  }
+
+}

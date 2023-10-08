@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;800&family=Bellefair&display=swap");
+
+/****
+RESET
+*****/
+* {
+  box-sizing: border-box;
+}
+
+div,
+nav,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow Condensed", sans-serif;
+  background-color: #0b0d17;
+  color: white;
+}
+
+/**********
+ TYPOGRAPHY 
+ **********/
+
+.blue{
+  color: #d0d6f9;
+}
+
+.bf{
+  font-family: "Bellefair", serif;
+}
+
+.up{
+  text-transform:uppercase
+}
+
+.home-container span{
+  font-size:5rem;
+  padding:0.1em 0;
+  display: block;
+  color: white;
+}
+
+.page-title {
+  text-align: center;
+  font-family: "Barlow Condensed";
+  letter-spacing: 2.7px;
+  margin: 2em; 
+}
+
+.page-title span {
+  font-weight: 700;
+  margin-right: 0.5em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+p {
+  line-height: 25px;
+}
+
+a span {
+font-weight: 700;
+padding-right: 0.5em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.destination-name{
+  font-size:3.125rem;
+}
+
+.destination-stat h4{
+  font-size: 0.8em;
+  margin-top: 1em;
+}
+
+.destination-stat h5{
+  font-size: 1.75em;
+  margin-top: 0.5em;
+  
+}
+
+
+/********
+ LAYOUT 
+********/
+
+/* Home */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 2em ;
+}
+
+.explore-btn {
+  margin-top: 1em;
+  height: 6em;
+  width: 6em;
+  border-radius: 50%;
+  border: 0;
+  font-size: 2rem;
+  letter-spacing: 2.35px;
+  color: #0b0d17;
+  transition:  transform 750ms ease-out;
+}
+
+.explore-btn:hover{
+  transform: scale(1.5);
+  transition:  transform 750ms ease-in-out; 
+}
+
+/* Header */
+
+.header-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:1.5em;
+  margin-bottom: 0;
+}
+
+.hamburger-menu {
+  cursor: pointer;
+  width: 2em;
+  height: 3em;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: 0;
+  z-index: 2000;
+  background-position: center;
+}
+
+.nav-bar {
+  background-color: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(2.5rem);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  right: 0;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  display: none;
+  gap: 2.5em;
+  padding-left: 2.5em;
+}
+
+.nav-bar[data-visible="true"] {
+  display: flex;
+  z-index: 1000;
+  height: 100%;
+}
+
+hr {
+  color: rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+/* Destination */
+
+.destination-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0 2em;
+}
+
+.destination-nav{
+  display: flex;
+  gap: 3em;
+  justify-content: center;
+  margin-bottom: 1em;
+  letter-spacing: 0.1rem; 
+}
+
+.destination-img{
+  width: 50%;
+  margin:1em auto;
+}
+
+
+/* Background */
+.page-bg{
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+}
+.home{
+  background-image: url(./assets/home/background-home-mobile.jpg);
+}
+
+.destination{
+  background-image: url(./assets/destination/background-destination-mobile.jpg);
+}
+
+.crew{
+  background-image: url(./assets/crew/background-crew-mobile.jpg);
+}
+
+.technology{
+  background-image: url(./assets/technology/background-technology-mobile.jpg);
+}
+
+/*************
+ MEDIA QUERIES
+ *************/
+
+@media (min-width: 602px) {
+  .page-title{
+    grid-area: title-page;
+    margin-right: auto;
+    margin-left: 2em;
+  }
+
+  /* Background */
+  .home{
+    background-image: url(./assets/home/background-home-desktop.jpg);
+  }
+  
+  .destination{
+    background-image: url(./assets/destination/background-destination-desktop.jpg);
+  }
+  
+  .crew{
+    background-image: url(./assets/crew/background-crew-desktop.jpg);
+  }
+  
+  .technology{
+    background-image: url(./assets/technology/background-technology-desktop.jpg);
+  }
+
+  /* Home */
+
+  .home-container{
+    margin-top: 10%;
+    flex-direction: row;
+    gap: 10em;
+    align-items: center;
+    
+  }
+
+  .home-container span{
+    font-size: 7rem;
+  }
+
+ .home-container h3{
+  font-size: 1.125rem;
+  letter-spacing: 4.3px;
+  }
+
+  .home-text{
+    width: 30%;
+    min-width: 300px;
+    text-align: center;
+  }
+  /* Header */
+
+  .hamburger-menu {
+    display: none;
+  }
+  .header-div {
+    position: static;
+    padding: 1em 0 0 1.5em;
+  }
+
+  a {
+    padding: 1.8em 0;
+  }
+  .nav-bar {
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding-right: 2em;
+    padding-left: 6em;
+  }
+
+  .nav-bar[data-visible="false"] {
+    display: flex;
+  }
+/* Destination */
+
+  .destination-container{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "title-page title-page"
+                          "............  nav"
+                          "planet-image planet-name"
+                          "planet-image  planet-paragraph"
+                          "planet-image hr"
+                          "planet-image planet-stats";  
+  }
+
+  .destination-img{
+    grid-area: planet-image;
+  }
+
+  .destination-nav{
+    grid-area: nav;
+  }
+
+  .destination-name{
+    grid-area: planet-name;
+    font-size: 6.25rem;
+  }
+
+  .destination-desc{
+    grid-area: planet-paragraph;
+  }
+
+  .destination-stat{
+    grid-area:planet-stats;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+  }
+
+  hr{
+    grid-area: hr;
+    align-self: center;
+  }
+}
+
+
