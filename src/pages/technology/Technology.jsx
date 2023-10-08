@@ -18,7 +18,7 @@ export default function Technology(){
             </div>
             <div className='technology-detail'>
                 <h3 className='up blue'>The terminology...</h3>
-                <h4 className='up bf'>Lauch vehicle</h4>
+                <h4 className='up bf'>Launch vehicle</h4>
                 <p className='blue'>A launch vehicle or carrier rocket is
                    a rocket-propelled vehicle used to carry 
                    a payload from Earth's surface to space, 
